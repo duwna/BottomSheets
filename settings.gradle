@@ -14,3 +14,14 @@ dependencyResolutionManagement {
 }
 rootProject.name = "BottomSheetsTest"
 include ':app'
+
+gradle.ext.roboswag = [
+        'kotlin-extensions',
+        'logging',
+        'utils'
+]
+
+gradle.ext.roboswag.forEach { module ->
+    include ":$module"
+    project(":$module").projectDir = file("RoboSwag/$module")
+}
