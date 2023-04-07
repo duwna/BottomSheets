@@ -17,8 +17,10 @@ include ':app'
 
 gradle.ext.roboswag = [
         'kotlin-extensions',
+        'navigation-base',
         'logging',
-        'utils'
+        'utils',
+        'bottom-sheet'
 ]
 
 gradle.ext.roboswag.forEach { module ->
